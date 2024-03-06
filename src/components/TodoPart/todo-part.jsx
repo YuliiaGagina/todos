@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Button,
   Count,
@@ -7,41 +7,41 @@ import {
   ListContainer,
   UpContainer,
   ListItem,
-} from './TodoPart.styled';
-import { useSelector } from 'react-redux';
-import { getFilteredTodos } from 'redux/selectors';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+} from './todo-part.styled'
+import { useSelector } from 'react-redux'
+import { getFilteredTodos } from 'redux/selectors'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 
-import { deleteTodo, toggleStatus } from 'redux/todoSlice';
-import CreateTodo from '../CreateTodo/CreateTodo';
+import { deleteTodo, toggleStatus } from 'redux/todo-slice'
+import CreateTodo from '../CreateTodo/create-todo'
 
 export const TodoPart = () => {
-  const allTodos = useSelector(getFilteredTodos);
-  const [filterType, setFilterType] = useState('all');
-  const [todos, setTodos] = useState(allTodos);
-  const dispatch = useDispatch();
+  const allTodos = useSelector(getFilteredTodos)
+  const [filterType, setFilterType] = useState('all')
+  const [todos, setTodos] = useState(allTodos)
+  const dispatch = useDispatch()
 
   const handleToggleStatus = title => {
-    dispatch(toggleStatus({ title }));
-  };
+    dispatch(toggleStatus({ title }))
+  }
 
   const handleDelete = title => {
-    dispatch(deleteTodo(title));
-  };
+    dispatch(deleteTodo(title))
+  }
 
   useEffect(() => {
     if (filterType === 'all') {
-      setTodos(allTodos);
+      setTodos(allTodos)
     } else if (filterType === 'completed') {
-      setTodos(allTodos.filter(todo => todo.completed));
+      setTodos(allTodos.filter(todo => todo.completed))
     } else if (filterType === 'incomplete') {
-      setTodos(allTodos.filter(todo => !todo.completed));
+      setTodos(allTodos.filter(todo => !todo.completed))
     }
-  }, [allTodos, filterType]);
+  }, [allTodos, filterType])
 
-  const completedCount = todos.filter(todo => todo.completed).length;
-  const incompleteCount = todos.length - completedCount;
+  const completedCount = todos.filter(todo => todo.completed).length
+  const incompleteCount = todos.length - completedCount
 
   return (
     <div>
@@ -85,5 +85,5 @@ export const TodoPart = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

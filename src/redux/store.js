@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit'
 
 import {
   persistStore,
@@ -10,18 +10,18 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import storage from 'redux-persist/lib/storage'
 
-import { todoReducer } from './todoSlice';
-import { filterReducer } from './filterSlice';
+import { todoReducer } from './todo-slice'
+import { filterReducer } from './filter-slice'
 
 const persistConfig = {
   key: 'todos',
   version: 1,
   storage,
   whitelist: ['todos'],
-};
-const persistedReducer = persistReducer(persistConfig, todoReducer);
+}
+const persistedReducer = persistReducer(persistConfig, todoReducer)
 
 export const store = configureStore({
   reducer: {
@@ -35,6 +35,6 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-});
+})
 
-export const persistor = persistStore(store);
+export const persistor = persistStore(store)

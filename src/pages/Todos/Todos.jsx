@@ -1,6 +1,6 @@
-import { Wrapper, FilterWrap } from './Todos.styled';
+import { Wrapper, FilterWrap } from './todos.styled'
 
-import { TodoPart } from '../../components/TodoPart/TodoPart';
+import { TodoPart } from '../../components/TodoPart/todo-part'
 
 export function Todos() {
   return (
@@ -11,5 +11,5 @@ export function Todos() {
         </FilterWrap>
       </Wrapper>
     </>
-  );
+  )
 }

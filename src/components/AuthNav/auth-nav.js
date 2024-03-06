@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
-import { HeaderWrapper } from './AuthNav.styled';
+import { HeaderWrapper } from './AuthNav.styled'
 
 export const AuthNav = () => {
   return (
@@ -12,5 +12,5 @@ export const AuthNav = () => {
       </ul>
       <p> Welcome dear friend</p>
     </HeaderWrapper>
-  );
-};
+  )
+}

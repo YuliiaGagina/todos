@@ -1,8 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
-import { Navbar } from './Navbar/Navbar';
-import { Todos } from 'pages/Todos/Todos';
-
-import { Home } from './Home/Home';
+import { Route, Routes } from 'react-router-dom'
+import { Navbar } from './Navbar/navbar'
+import { Todos } from 'pages/Todos/todos'
+import { Home } from './Home/home'
 
 export function App() {
   return (
@@ -13,5 +12,5 @@ export function App() {
         <Route path="/todos" element={<Todos />} />
       </Route>
     </Routes>
-  );
+  )
 }

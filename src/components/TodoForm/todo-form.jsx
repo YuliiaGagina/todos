@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../../redux/todoSlice';
+import { addTodo } from '../../redux/todo-slice';
 
 import {
   FormContainer,
@@ -8,7 +8,7 @@ import {
   FormInput,
   ErrorMessage,
   SubmitButton,
-} from './TodoForm.styled';
+} from './todo-form.styled';
 
 const MAX_LENGTH = 15;
 

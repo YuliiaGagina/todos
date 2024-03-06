@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import Modal from 'react-modal';
-import TodoForm from '../TodoForm/TodoForm';
-import { AddButton, FlexCont } from './CreateTodo.styled';
+import TodoForm from '../TodoForm/todo-form';
+import { AddButton, FlexCont } from './create-todo.styled';
 import { IoMdAdd } from 'react-icons/io';
 import { IoCloseOutline } from 'react-icons/io5';
 

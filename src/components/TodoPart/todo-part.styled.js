@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 export const Button = styled.button`
   margin-top: 12px;
@@ -11,7 +11,7 @@ export const Button = styled.button`
     background-color: #f1f692;
     color: #413941;
   }
-`;
+`
 export const Select = styled.select`
   width: 100px;
   height: 50px;
@@ -21,13 +21,13 @@ export const Select = styled.select`
 
   text-align: center;
   margin-bottom: 40px;
-`;
+`
 
 export const ListContainer = styled.ul`
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-`;
+`
 
 export const ListItem = styled.li`
   margin-bottom: 10px;
@@ -39,25 +39,25 @@ export const ListItem = styled.li`
   &:hover {
     background-color: #eaeaea;
   }
-`;
+`
 
 export const UpContainer = styled.div`
   justify-content: center;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-`;
+`
 
 export const TodoTitle = styled.p`
   font-size: 18px;
   font-weight: bold;
   textdecoration: ${({ completed }) => (completed ? 'line-through' : 'none')};
   text-decoration: ${({ completed }) => (completed ? 'line-through' : 'none')};
-`;
+`
 
 export const Count = styled.p`
   font-size: 22px;
   font-weight: 600;
   line-height: 1.8;
   margin-bottom: 10px;
-`;
+`

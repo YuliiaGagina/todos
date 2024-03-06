@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '@emotion/react'
 
 export const GlobalStyles = css`
   h1,
@@ -33,4 +33,4 @@ export const GlobalStyles = css`
   img {
     display: block;
   }
-`;
+`
